@@ -1,10 +1,32 @@
 .logo{
-    width: 35%;
-    height: 35%;
-    
-.bg-grey {
+    width: 30%;
+    height: 30%;
+}
+
+.bg-grey{
     background-color: #d9d9d9!important;
 }
+
+.bg-yellow{
+    background-color: #fff700!important;
+}
+
+.py-11{
+    padding-top: 12rem!important;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+
+.herohomeimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88466237-1f295080-cec2-11ea-829b-58fe235ce1ab.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 
 /*Photo Grid - https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
 .categoryContainer {
@@ -51,6 +73,30 @@ body {
   vertical-align: middle;
   width: 100%;
 }
+
+
+.ctaContainer {
+    font-size: 0;
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center !important;
+} 
+
+
+
+.newslettercard {
+    background-color: #d9d9d9 !important;
+}
+
+
+
+
+
+
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
