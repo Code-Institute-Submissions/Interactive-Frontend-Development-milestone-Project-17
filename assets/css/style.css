@@ -26,6 +26,20 @@
     background-repeat: no-repeat;
 }
 
+.foodheroimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88487874-db495080-cf80-11ea-9be7-61e51e55bb79.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.eventsheroimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88487868-d4224280-cf80-11ea-8576-4823eabc348f.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 
 
 /*Photo Grid - https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
