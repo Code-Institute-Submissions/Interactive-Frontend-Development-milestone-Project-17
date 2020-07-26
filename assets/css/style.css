@@ -15,6 +15,10 @@
     padding-top: 12rem!important;
 }
 
+.py-18{
+    padding-top: 18rem!important;
+}
+
 .navbar {
     padding: 0 !important;
 }
@@ -26,8 +30,17 @@
     background-repeat: no-repeat;
 }
 
+/*svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  
+}
+/* set height to pixels if you want angle to change with screen width */
+
 .foodheroimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88487874-db495080-cf80-11ea-9be7-61e51e55bb79.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://user-images.githubusercontent.com/17083566/88487874-db495080-cf80-11ea-9be7-61e51e55bb79.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
