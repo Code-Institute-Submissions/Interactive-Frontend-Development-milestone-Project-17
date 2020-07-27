@@ -75,32 +75,22 @@
 
 	<!-- Page Content -->
 	<!--BLURB - Shop local Support Galway-->
-	<div class="header">
+	<div class="header text-align-center">
 		<h1>Support a Local Business in Galway Today</h1>
 		<p>The businesses of Galway need the support of our community.</p>
 	</div>
 
 	<!--Google Map Overview of the different areas -->
-	<section class="bg-success py-10">
+	<section class="bg-success mapContainer">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-                
+					<div id="map">
+					</div>
 				</div>
 			</div>
 		</div>
-        <div id="myFoodCatMap">
-
-        </div>
 	</section>
-
-
-
-
-
-
-
-
 
 
 
@@ -357,7 +347,17 @@
 		</div>
 		<!-- /.container -->
 	</footer>
+	<!--Google maps api-->
+	<script
+		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	</script>
+	<!--Allows to add clusters to map-->
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXVI8fNS34Bmsh24PZHD16mlPtimQKqQE&callback=initMap">
+	</script>
+    <script src="assets/js/maps.js"></script>
 
+    
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -366,9 +366,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script>
-    var APIKey = "AIzaSyCXVI8fNS34Bmsh24PZHD16mlPtimQKqQE";
-    </script>
 </body>
 
 </html>
