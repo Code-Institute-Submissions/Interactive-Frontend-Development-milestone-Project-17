@@ -11,9 +11,9 @@
     background-color: #fff700!important;
 }
 
-.py-11{
+/*.py-11{
     padding-top: 12rem!important;
-}
+}*/
 
 .py-18{
     padding-top: 18rem!important;
@@ -25,9 +25,22 @@
 
 
 .herohomeimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88712905-5aba5980-d112-11ea-94a3-6e7ca8207660.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+
+
+/*.herohomeimg {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88466237-1f295080-cec2-11ea-829b-58fe235ce1ab.png');
     background-size: cover;
     background-repeat: no-repeat;
+}*/
+
+img.bannerLogo {
+    width: 26%;
 }
 
 /*svg {
@@ -132,10 +145,14 @@ body {
 }
 
 
+/*................................................................................@media quesries*/
 
-
-
-
+/* logo on banner*/
+@media screen and (max-width: 800px) {
+.herohomeimg {
+   height: 200px; 
+    }
+}
 
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -145,6 +162,11 @@ body {
     flex: 50%;
     max-width: 50%;
   }
+  iimg.bannerLogo {
+    width: 26%;
+    bottom: 50px;
+    position: relative;
+}   
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -154,4 +176,12 @@ body {
     flex: 100%;
     max-width: 100%;
   }
+  .herohomeimg {
+   height: 200px; 
+    }
+    img.bannerLogo {
+    width: 26%;
+    bottom: 50px;
+    position: relative;
+    }
 }
