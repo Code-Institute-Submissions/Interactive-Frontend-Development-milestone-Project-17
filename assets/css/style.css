@@ -31,6 +31,14 @@
     height: 500px;
 }
 
+.galwayherohomeimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88720215-690d7300-d11c-11ea-8932-b6a3f0a537c2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+
 
 
 /*.herohomeimg {
