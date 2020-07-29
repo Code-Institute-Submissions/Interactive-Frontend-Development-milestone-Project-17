@@ -1,69 +1,76 @@
-.logo{
-    width: 30%;
-    height: 30%;
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+
+/*-----------------------------------S- General CSS area used more than once through out the site */
+
+body {
+  margin: 0;
+  font-family: Arial;
 }
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.card {
+    border: none;
+}
+
+
+/*-----------------------------------Colours */
 
 .bg-grey{
     background-color: #d9d9d9!important;
 }
 
 .bg-yellow{
-    background-color: #fff700!important;
+    background-color: #FEF648!important;
 }
 
-/*.py-11{
-    padding-top: 12rem!important;
-}*/
+/*-----------------------------------Special paddings/margins/text  */
+
 
 .py-18{
     padding-top: 18rem!important;
+}
+
+
+
+
+/*-----------------------------------Navigation */
+
+.logo{
+    width: 30%;
+    height: 30%;
 }
 
 .navbar {
     padding: 0 !important;
 }
 
-
-.herohomeimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88712905-5aba5980-d112-11ea-94a3-6e7ca8207660.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-}
-
-.galwayherohomeimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88720215-690d7300-d11c-11ea-8932-b6a3f0a537c2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-}
-
-
-
-
-/*.herohomeimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88466237-1f295080-cec2-11ea-829b-58fe235ce1ab.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}*/
-
+/*-----------------------------------Background images - Homepage and hero images */
 img.bannerLogo {
     width: 26%;
 }
 
-/*svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10vw;
-  
+.heroimg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
 }
-/* set height to pixels if you want angle to change with screen width */
+
+.herohomeimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88712905-5aba5980-d112-11ea-94a3-6e7ca8207660.png');
+}
+
+.galwayherohomeimg {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88720215-690d7300-d11c-11ea-8932-b6a3f0a537c2.png');
+}
+
 
 .foodheroimg {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://user-images.githubusercontent.com/17083566/88487874-db495080-cf80-11ea-9be7-61e51e55bb79.png');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 
@@ -71,7 +78,11 @@ img.bannerLogo {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88487868-d4224280-cf80-11ea-8576-4823eabc348f.png');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 500px;
 }
+
+
+/*-----------------------------------Map */
 
 div#map {
     min-height: 360px;
@@ -81,14 +92,15 @@ div#map {
     padding: 20px;
 }
 
-.card {
-    border: none;
-}
+
+/*-----------------------------------Catagory List Page */
 
 .businessButtons{
     text-align: center;
 
 }
+
+/*-----------------------------------Photo Grip for Catagories */
 
 /*Photo Grid - https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
 .categoryContainer {
@@ -103,15 +115,6 @@ div#map {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-.header {
-  text-align: center;
-  padding: 32px;
-}
 
 .gridrow {
   display: -ms-flexbox; /* IE10 */
@@ -135,25 +138,31 @@ body {
   width: 100%;
 }
 
+/*-----------------------------------END  - Photo Grip for Catagories */
+
+
+
+/*-----------------------------------Homepage */
+
 
 .ctaContainer {
     font-size: 0;
     width: 80%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 20px 20px;
     margin-right: auto;
     margin-left: auto;
     text-align: center !important;
 } 
 
-
-
 .newslettercard {
     background-color: #d9d9d9 !important;
 }
 
+/*-----------------------------------MISC */
 
-/*................................................................................@media quesries*/
+
+
+/*................................................................................@media queries*/
 
 /* logo on banner*/
 @media screen and (max-width: 800px) {
