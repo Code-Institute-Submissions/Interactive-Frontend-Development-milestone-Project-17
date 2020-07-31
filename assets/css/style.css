@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-#map {
-  height: 100%;
-}
+
 
 /* Optional: Makes the sample page fill the window. */
 /*html,
@@ -95,6 +91,7 @@ li:nth-child(odd) {
 /*-----------------------------------S- General CSS area used more than once through out the site */
 
 body {
+  height:100%;
   margin: 0;
   font-family: Arial;
 }
@@ -145,35 +142,81 @@ img.bannerLogo {
     width: 26%;
 }
 
-.heroimg{
+
+/*.heroimg{
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
-}
+}*/
 
 .herohomeimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88712905-5aba5980-d112-11ea-94a3-6e7ca8207660.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.2)),
+    url('https://user-images.githubusercontent.com/17083566/88712905-5aba5980-d112-11ea-94a3-6e7ca8207660.png');
 }
 
 .galwayherohomeimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88720215-690d7300-d11c-11ea-8932-b6a3f0a537c2.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('https://user-images.githubusercontent.com/17083566/88720215-690d7300-d11c-11ea-8932-b6a3f0a537c2.png');
+
 }
 
 
 .foodheroimg {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://user-images.githubusercontent.com/17083566/88487874-db495080-cf80-11ea-9be7-61e51e55bb79.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.5),
+     rgba(0, 0, 0, 0.5)),
+     url('https://user-images.githubusercontent.com/17083566/88487874-db495080-cf80-11ea-9be7-61e51e55bb79.png');
 }
 
 
 .eventsheroimg {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://user-images.githubusercontent.com/17083566/88487868-d4224280-cf80-11ea-8576-4823eabc348f.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+
+}
+
+.heroimg {
     height: 500px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
 }
 
 
+.hero-title {
+    
+    font-weight: 500;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    
+    font-weight: 300;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #ffffff;
+}
+
+.col.heading {
+
+    margin-top: 10rem;
+}
+
+
+
 /*-----------------------------------Map */
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+/*#map {
+  height: 100%;
+}*/
+
 
 div#map {
     min-height: 360px;
@@ -183,13 +226,47 @@ div#map {
     padding: 20px;
 }
 
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+
 
 /*-----------------------------------Catagory List Page */
 
-.businessButtons{
+.businessButtonSection{
     text-align: center;
     display: inline-block;
-    
+    margin-right: 20px;
+    margin-left: 20px;   
 }
 
 /*-----------------------------------Photo Grip for Catagories */
