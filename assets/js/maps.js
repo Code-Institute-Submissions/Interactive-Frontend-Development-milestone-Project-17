@@ -4,10 +4,10 @@ var map;
 var infowindow;
 var center = {
     lat: 53.273850, lng: -9.052223
- 
+
 };
 var markers = [];
-
+var placesList = document.getElementById("placesList");
 
 
 function initMap() {
@@ -20,19 +20,36 @@ function initMap() {
     
 }
 
+/*function initMap(type) {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: center,
+        zoom: 16
+    });
+    callService(map, type);
+    infowindow = new google.maps.InfoWindow();
+    
+}*/
+
 function callback(results, status) {
+    placesList.innerHTML = "";
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
         }
-        
     }
 }
 
-function createMarker(place) {
-    const placesList = document.getElementById("places");
 
-        const image = {
+/*function createPhotoMarker(place) {
+        var photos = place.photos;
+        if (!photos) {
+            return;
+        }*/
+
+
+function createMarker(place) {
+
+       const image = {
             url: place.icon,
             size: new google.maps.Size(71, 71),
             origin: new google.maps.Point(0, 0),
@@ -45,52 +62,162 @@ function createMarker(place) {
             title: place.name,
             position: place.geometry.location
         });
-        console.log(place.name)
-    
+        console.log(place.website);
+
 
         markers.push(marker);
         marker.addListener("click", () => {
-            infowindow.setContent(place.name);
+            /* service.getDetails(request, function(details, status) {*/
+            service.getDetails(request, () =>  {
+            infowindow.setContent(place.name + "<br />" + place.website + "<br />" + place.rating);
             infowindow.open(map, marker, this);
+            console.log(place.website);
+            });
+        });
+    // Create card element
+      const card = document.createElement('div');
+      card.classList = 'card-body';
+
+// Construct card content
+     /* const content = `
+        <div class="card">
+        <div class="card-header>
+          HEllo
+        </div>
+    
+        <div>
+          <div class="card-body">
+    <img src=${place.photos[0].getUrl({maxWidth: 50, maxHeight: 50})}/>
+            <h5> ${place.name} </h5>
+            <p> Rating: ${place.rating}</p>
+            <p> Area: ${place.vicinity}</p>
+             
+    </br>
+          </div>
+        </div>
+      </div>
+      `;*/
+
+
+const content = `<div class="container">
+    <div class="card bisCard flex-row flex-wrap border-1">
+        <div class="card-header border-1 text-center align-middle">
+            <img src= ${place.photos[0].getUrl({maxWidth: 100, maxHeight: 100})}/>
+        </div>
+        <div class="card-block px-2">
+            <h4 class="card-title">${place.name}</h4>
+            <p class="card-text">Description</p>
+             <p> Rating: ${place.rating}</p>
+            <p> Area: ${place.vicinity}</p>
+             <a href="${place.website}" class="btn btn-primary">${place.website}</a>
+            <!-- <a href="${place.website}" class="btn btn-primary">Website</a>-->
+        </div>
+    </div>
+    </div>`;
+
+
+placesList.innerHTML += content;
+
+     /*placesList.innerHTML += '<div class="card">' + 'Name: ' + place.name  + "<br /> " + 'Rating: ' + place.rating + "<br /> " + place.vicinity + '</div>';*/
+
+
+    }
+
+
+    // Create DIV element and append to opening_hours_div
+          /*  var content = document.createElement('div');
+            content.innerHTML = 'Name: ' + place.name + '<br>'; 
+            content.innerHTML += 'Rating: ' + place.rating;
+
+            phoneNumberDiv.appendChild(content);*/
+
+
+    /* google.maps.event.addListener(marker, 'click', function() {
+       service.getDetails(request, function(details, status) {
+         console.log(details,status);
+         infowindow.setContent(details.name + "<br />" + details.formatted_address +"<br />" + details.website + "<br />" + details.rating + "<br />" + details.formatted_phone_number);
+         infowindow.open(map, marker);
+       });
+    });*/
+
+
+    /*const apiResult = [{
+      name: "title1",
+      description: "desc1",
+      output: "out1"
+    }, {
+      title: "title2",
+      description: "desc2",
+      output: "out2"
+    }, {
+      title: "title3",
+      description: "desc3",
+      output: "out3"
+    }];
+    
+    
+    const container = document.getElementById('placesList');
+    
+    placesList.forEach((result, idx) => {
+      // Create card element
+      const card = document.createElement('div');
+      card.classList = 'card-body';
+    
+      // Construct card content
+      const content = `
+        <div class="card">
+        <div class="card-header" id="heading-${idx}">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-${idx}" aria-expanded="true" aria-controls="collapse-${idx}">
+    
+                    </button>
+          </h5>
+        </div>
+    
+        <div id="collapse-${idx}" class="collapse show" aria-labelledby="heading-${idx}" data-parent="#accordion">
+          <div class="card-body">
+    
+            <h5>${result.title}</h5>
+            <p>${result.description}</p>
+            <p>${result.output}</p>
+            ...
+          </div>
+        </div>
+      </div>
+      `;
+    
+      // Append newyly created card element to the container
+      container.innerHTML += content;
+    })*/
+
+
+
+
+
+
+    function callService(map, place) {
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+            location: center,
+            radius: 1000,
+            type: [place]
+        }, callback);
+    }
+
+    function clearMarker() {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+    }
+
+    $(function () {
+        $('.place-types :radio').click(function () {
+            var plc = $(this).val();
+            clearMarker();
+            callService(map, plc);
         });
 
-   /* google.maps.event.addListener(marker, 'click', function() {
-      service.getDetails(request, function(details, status) {
-        console.log(details,status);
-        infowindow.setContent(details.name + "<br />" + details.formatted_address +"<br />" + details.website + "<br />" + details.rating + "<br />" + details.formatted_phone_number);
-        infowindow.open(map, marker);
-      });
-   });
-
-  placesList.innerHTML += '<li>' + place.name + '</li>';*/
-        
-} 
-
-
-function callService(map, place) {
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: center,
-        radius: 1000,
-        type: [place]
-    }, callback);
-}
-
-function clearMarker() {
-    for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(null);
-    }
-}
-
-
-$(function () {
-    $('.place-types :radio').click(function () {
-        var plc = $(this).val();
-        clearMarker();
-        callService(map, plc);
     });
-
-});
 
 
 
@@ -129,11 +256,6 @@ $(function () {
               console.log("Returned place contains no geometry");
               return;
             }*/
-
-
-
-
-
 
 /*function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
