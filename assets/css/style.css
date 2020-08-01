@@ -101,8 +101,12 @@ body {
   padding: 32px;
 }
 
-.card {
+/*.card {
     border: none;
+}*/
+
+.bisCard{
+    border: #FEF648 solid 1px !important;
 }
 
 
