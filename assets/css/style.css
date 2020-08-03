@@ -105,9 +105,9 @@ body {
     border: none;
 }*/
 
-.bisCard{
+/*.bisCard{
     border: #FEF648 solid 1px !important;
-}
+}*/
 
 
 /*-----------------------------------Colours */
@@ -118,6 +118,11 @@ body {
 
 .bg-yellow{
     background-color: #FEF648!important;
+}
+
+.card-header{
+    background-color: #ffffff!important;
+    border-bottom:none;
 }
 
 /*-----------------------------------Special paddings/margins/text  */
