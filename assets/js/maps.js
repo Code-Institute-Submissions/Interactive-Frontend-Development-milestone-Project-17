@@ -14,7 +14,7 @@ function initMap() {
         zoom: 16
     });
 
-    callService(map, 'cafe');
+    callService(map, type);
     infowindow = new google.maps.InfoWindow();
         
 

@@ -17,7 +17,7 @@
 
 	<!-- project CSS style sheet-->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<title>We Support Local - Galway </title>
+	<title>We Support Local - Food & Drink </title>
 </head>
 
 <body>
@@ -70,23 +70,22 @@
 		<h1>Support a Local Business in Galway Today</h1>
 		<p>The businesses of Galway need the support of our community.</p>
 	</div>
-
 	<!--Google Map Overview of the different Food & Drink places -->
-	<div class="card card-body bg-light align-content-center">
-		<div class="row">.                                                                                             
+	<div class="card card-body bg-light text-center">
+		<div class="row">
 			<div class="col businessButtons ">
-				<div class="place-types radio-inline" id="places">
-					<input class="with-gap" name="type" type="radio" id="cafe" value="cafe" checked />
+				<div class="place-types radio-inline " id="places">
+                <strong>Select an option: </strong>
+					<input class="with-gap" name="type" type="radio" id="cafe" value="cafe" />
 					<label class="radio-inline" for="cafe">Cafe</label>
-					<input class="with-gap" name="type" type="radio" id="restaurant" value="restaurant" />
+					<input class="with-gap" name="type" type="radio" id="restaurant" value="restaurant"/>
 					<label class="radio-inline" for="restaurant">Restaurant</label>
-					<input class="with-gap" name="type" type="radio" id="bar" value="bar" />
+					<input class="with-gap" name="type" type="radio" id="bar" value="bar"/>
 					<label class="radio-inline" for="apotik">Bar</label>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<div class="card card-body bg-light align-content-center">
 		<div class="row">
 			<div class="col businessButtons ">
@@ -94,75 +93,46 @@
 			</div>
 		</div>
 	</div>
-
-
- <div  id="placesList"> </div>
-
-
-      
-
 	</br>
 	<div class="ccard card-body bg-light align-content-center">
-		<p class="text-center">Catagory buttons to update the section below</p>
-		<div class="container text-center">
-			<div class="row businessButtons">
-				<!--<div class="col-md-1 businessButtons">
-			<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="foodCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/88979455-a5c2a100-d2b9-11ea-9bae-6767348cf3ad.png"> </a>
-  </button>
-				
-                </div>-->
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="eventsCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083142-f3a5da80-d387-11ea-9427-b571abca6c5d.png"> </a>
-  </button>
-					<!--<div class="collapse" id="collapseExample1">
-					werwerwerwerwerwre
-				</div>-->
+		<h4 class="text-center">Not what you're looking for? Check another catagory</h4>
+		<!--Grid content -->
+		<!-- Photo Grid - https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp -->
+		<section class="categorypageContainer">
+			<div class="catagorygridrow categorypageContainer">
+				<div class="catagorygridcolumn">
+					<a href="foodCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077065-50e65f80-d379-11ea-9e68-a9930fcb3e2d.png"></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-    <a href="servicesCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89083135-f1dc1700-d387-11ea-872d-a74fa2241283.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="eventsCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077060-4fb53280-d379-11ea-8532-7bb8474bd040.png"></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="homeCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083140-f30d4400-d387-11ea-94a7-46579538a5d2.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="servicesCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077054-4deb6f00-d379-11ea-954a-1a6485f067f8.png"></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-  <a href="charityCategoryListPage.html">  <img src="https://user-images.githubusercontent.com/17083566/89083139-f30d4400-d387-11ea-96f7-028e2b9fac46.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="homeCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077059-4f1c9c00-d379-11ea-9dcb-2510032c99ec.png" ></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-  <a href="hairCategoryListPage.html">  <img src="https://user-images.githubusercontent.com/17083566/89083145-f3a5da80-d387-11ea-9bf2-902a5ffbce76.png"> </a>
-  </button>
-
-				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="shoppingCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083146-f3a5da80-d387-11ea-882a-5c0f578060d3.png"> </a>
-  </button>
-
-				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="healthCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083137-f274ad80-d387-11ea-8073-0f93b5664710.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="charityCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077047-4af07e80-d379-11ea-90ee-5d55215c34f1.png" ></a>
 				</div>
 
-
-
+				<div class="catagorygridcolumn">
+					<a href="hairCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077062-504dc900-d379-11ea-9565-cb53c5174367.png" ></a>
+				</div>
+				<div class="catagorygridcolumn">
+					<a href="shoppingCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077057-4e840580-d379-11ea-8402-89c840871ee4.png" ></a>
+				</div>
+				<div class="catagorygridcolumn">
+					<a href="healthCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077058-4f1c9c00-d379-11ea-8634-4f5ecf49ee66.png"></a>
+				</div>
 			</div>
-		</div>
 	</div>
 
+	</section>
+	</div>
+
+	<!--List of places -->
+	<div id="placesList"> </div>
 
 	<!-- CTA section -->
 
