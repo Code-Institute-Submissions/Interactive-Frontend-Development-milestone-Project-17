@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--access exrtenal links - bootstrap cdn - https://www.bootstrapcdn.com/-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		type="text/css" />
+	<!--access exrtenal links - fontAwesome cdn - https://www.bootstrapcdn.com/-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		type="text/css" />
+	<!--CdN to access hover CSS-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+		type="text/css" />
+
+	<!-- project CSS style sheet-->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	<title>We Support Local - Tourism </title>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-grey fixed">
+		<div class="container">
+
+			<a class="navbar-brand logo" href="index.html">
+				<img src="assets/images/WSLlogocircle.png" class="logo" alt="">
+	        </a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Submit A Business</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="galwayCatagoryPage.html">Galway</a>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+	<!-- Header -->
+	<header class="container-fluid pb-5 mb-5">
+		<div class="row foodheroimg heroimg">
+			<div class="col-md-12">
+				<div class="row no-gutters bg-color-name-title">
+					<div class="col heading">
+						<h1 class="hero-title">Charity</h1>
+						<h2 class="hero-subtitle">Explore the local tastes and flavours of Galway</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- /.header -->
+
+	<!-- Page Content -->
+	<!--BLURB - Shop local Support Galway-->
+	<div class="header text-align-center">
+		<h1>Support a Local Business in Galway Today</h1>
+		<p>The businesses of Galway need the support of our community.</p>
+	</div>
+
+	<!--Google Map Overview of the different Food & Drink places -->
+	<div class="card card-body bg-light align-content-center">
+		<div class="row">.                                                                                             
+			<div class="col businessButtons ">
+				<div class="place-types radio-inline" id="places">
+					<input class="with-gap" name="type" type="radio" id="tourist_attraction" value="tourist_attraction" checked />
+					<label class="radio-inline" for="tourist_attraction">Tourist Attraction</label>
+					<input class="with-gap" name="type" type="radio" id="travel_agency" value="travel_agency" />
+					<label class="radio-inline" for="travel_agency">Travel Agency</label>
+
+                    <input class="with-gap" name="type" type="radio" id="lodging" value="lodging" />
+					<label class="radio-inline" for="restalodgingurant">Lodging</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card card-body bg-light align-content-center">
+		<div class="row">
+			<div class="col businessButtons ">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+
+
+ <div  id="placesList"> </div>
+
+
+      
+
+	</br>
+	<div class="ccard card-body bg-light align-content-center">
+		<p class="text-center">Catagory buttons to update the section below</p>
+		<div class="container text-center">
+			<div class="row businessButtons">
+				<!--<div class="col-md-1 businessButtons">
+			<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+   <a href="foodCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/88979455-a5c2a100-d2b9-11ea-9bae-6767348cf3ad.png"> </a>
+  </button>
+				
+                </div>-->
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+   <a href="eventsCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083142-f3a5da80-d387-11ea-9427-b571abca6c5d.png"> </a>
+  </button>
+					<!--<div class="collapse" id="collapseExample1">
+					werwerwerwerwerwre
+				</div>-->
+				</div>
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+    <a href="servicesCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89083135-f1dc1700-d387-11ea-872d-a74fa2241283.png"> </a>
+  </button>
+
+				</div>
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+   <a href="homeCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083140-f30d4400-d387-11ea-94a7-46579538a5d2.png"> </a>
+  </button>
+
+				</div>
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+  <a href="charityCategoryListPage.html">  <img src="https://user-images.githubusercontent.com/17083566/89083139-f30d4400-d387-11ea-96f7-028e2b9fac46.png"> </a>
+  </button>
+
+				</div>
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+  <a href="hairCategoryListPage.html">  <img src="https://user-images.githubusercontent.com/17083566/89083145-f3a5da80-d387-11ea-9bf2-902a5ffbce76.png"> </a>
+  </button>
+
+				</div>
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+   <a href="shoppingCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083146-f3a5da80-d387-11ea-882a-5c0f578060d3.png"> </a>
+  </button>
+
+				</div>
+				<div class="col-md-1 businessButtons">
+					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+   <a href="healthCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083137-f274ad80-d387-11ea-8073-0f93b5664710.png"> </a>
+  </button>
+
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- CTA section -->
+
+	<div class="align-items-center ctaContainer">
+		<div class="row ">
+			<div class="col">
+				<h2>Want to add your business? Register for free <a href="submitabusiness.html"> here.</a></h2>
+				<hr>
+			</div>
+		</div>
+	</div>
+	<!-- /.CTA-->
+
+	<!-- Newsletter Section -->
+	<section class="bg-yellow pt-5 pb-10 pb-5">
+		<div class="container">
+			<div class="newslettercard mt-n15 mb-10 z-1">
+				<div class="card-body p-5">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<h4>Get the latest news</h4>
+							<p class="lead text-gray-500 mb-0">Stay in the loop with the latest updates and features
+								added to our application!</p>
+						</div>
+						<div class="col-lg-6">
+							<div class="input-group mb-2">
+								<input class="form-control form-control-solid" type="text" placeholder="youremail@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
+								<div class="input-group-append">
+									<button class="btn btn-primary" id="button-addon2" type="button">Sign up</button>
+								</div>
+							</div>
+							<div class="small text-gray-500">You can unsubscribe at any time.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+		</div>
+	</footer>
+
+	<!--SCRIPTS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="assets/js/maps.js"></script>
+	<!--Google maps api-->
+	<script
+		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	</script>
+	<!--Allows to add clusters to map-->
+	<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXVI8fNS34Bmsh24PZHD16mlPtimQKqQE&callback=initMap"></script>-->
+	<!--Places-->
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXVI8fNS34Bmsh24PZHD16mlPtimQKqQE&callback=initMap&libraries=places">
+	</script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
