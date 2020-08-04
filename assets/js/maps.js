@@ -8,16 +8,17 @@ var center = {
 var markers = [];
 var placesList = document.getElementById("placesList");
 
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: center,
         zoom: 16
     });
 
-    callService(map, type);
+    callService(map, 'cafe'); //if I set it to type info window doesn't show - DO I set a default for each catagory to avoid this? 
     infowindow = new google.maps.InfoWindow();
-        
-
+   
+    
 }
 
 
@@ -42,16 +43,25 @@ function createMarker(place) {
         map: map,
         icon: image,
         title: place.name,
-        position: place.geometry.location
+        position: place.geometry.location,
+        url: place.url
     });
-
     markers.push(marker);
     marker.addListener("click", () => {
-        infowindow.setContent("<div><strong>" + place.name + "</strong><br>" + "Rating: " + place.rating + "<br>" + place.website + "</div>");
+        infowindow.setContent("<div><strong>" + place.name + "</strong><br>" + "Rating: " + place.rating + "<br>" + place.url + "</div>");
         infowindow.open(map, marker, this);
-
+        /*map.setZoom(18);
+        map.setCenter(marker.getPosition());*/
     });
 
+       /*map.addListener("center_changed", () => {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(() => {
+      map.panTo(marker.center());
+    }, 3000);
+  });*/
+  
 
 
     // Create card element
@@ -70,12 +80,14 @@ function createMarker(place) {
             <p class="card-text">Description</p>
              <p> Rating: ${place.rating}</p>
             <p> Area: ${place.vicinity}</p>
-            <a href="${place.website}" class="btn btn-primary align-bottom">${place.website}</a>
+            <a href="${place.url}" class="btn btn-primary align-bottom">${place.url}</a>
         </div>
     </div>
     </div>`;
 
+
     placesList.innerHTML += content;
+
 
 }
 
