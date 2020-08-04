@@ -16,6 +16,17 @@
 		type="text/css" />
 	<!-- project CSS style sheet-->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!--Email JS-->
+
+<!--CI CODE-->
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_vanqZMkpPOADQP2iEpqKS");
+        })();
+    </script>
+    <!--end CI code-->
 	<title>We Support Local - Galway </title>
 </head>
 
@@ -76,15 +87,16 @@
 
 	<!-- Form for business submission -->
 	<div class="card card-body bg-light formCard">
-		<form>
+		<form onsubmit="return sendMail(this);">
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label class="text-dark" for="inputName">Full name</label><input class="form-control py-4" id="inputName" type="text" placeholder="Full name" /></div>
+					<label class="text-dark" for="fullname">Full name</label
+                    ><input type="text" name="name" class="form-control py-4" id="fullname" placeholder="Full name" required /></div>
 					<div class="form-group col-md-6">
-						<label class="text-dark" for="inputEmail">Email</label><input class="form-control py-4" id="inputEmail" type="email" placeholder="name@example.com" /></div>
+						<label class="text-dark" for="emailaddress">Email</label>
+                        <input type="text" name="emailaddress" class="form-control py-4" id="emailaddress" placeholder="Email - name@example.com" required /></div>
 					</div>
-
-					<select class="custom-select">
+				<!--	<select class="custom-select">
   <option selected>Open this select menu</option>
   <option value="1">Health & Fitness</option>
   <option value="2">Events</option>
@@ -94,17 +106,19 @@
   <option value="6">Shopping</option>
   <option value="7">Charity & Volunteering</option>
   <option value="8">Services</option>
-</select>
+</select>-->
 
 					<div class="form-group">
-						<label class="text-dark" for="inputMessage">Businness Overview</label><textarea class="form-control py-3" id="inputMessage" type="text" placeholder="Please share with us an overview of your businiess and how best to support you" rows="4"></textarea>
-					</div>
+						<label class="text-dark" for="businesssubmissionsummary">Business Overview</label>
+                        <textarea rows="5" name="businesssubmissionsummary" class="form-control py-3" id="businesssubmissionsummary" placeholder="Please share with us an overview of your businiess and how best to support you" required></textarea>
+                    </div>
 
 					<div class="text-center">
 						<button class="btn btn-primary btn-marketing mt-4" type="submit">Submit Request</button></div>
 		</form>
 	</div>
 	
+
 
 	<!-- Newsletter Section -->
 
@@ -144,7 +158,8 @@
 		</div>
 		<!-- /.container -->
 	</footer>
-
+<!-- emailJS-->
+<script src="assets/js/submitBusiness.js"></script>
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
