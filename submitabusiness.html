@@ -8,25 +8,18 @@
 	<!--access exrtenal links - bootstrap cdn - https://www.bootstrapcdn.com/-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		type="text/css" />
-	<!--access exrtenal links - fontAwesome cdn - https://www.bootstrapcdn.com/-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		type="text/css" />
-	<!--CdN to access hover CSS-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
-		type="text/css" />
+
 	<!-- project CSS style sheet-->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <!--Email JS-->
 
-<!--CI CODE-->
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("user_vanqZMkpPOADQP2iEpqKS");
+	<!--EmailJS CODE-->
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+            emailjs.init("user_QPHGtQWAOIFwpJX3LeemE");
         })();
-    </script>
-    <!--end CI code-->
+	</script>
+	<!--end EmailJS code-->
 	<title>We Support Local - Galway </title>
 </head>
 
@@ -61,19 +54,19 @@
 	</nav>
 
 	<!-- Header -->
-	<header class="py-11 pb-5 mb-5 herobusinessimg">
-		<div class="container h-100">
-			<div class="row h-100 ">
-				<div class="col-lg-12 text-center ">
-					<h1 class="display-4 text-white mt-5 mb-2">Submit A Business</h1>
-					<h3 class=" text-white">Galway</h3>
-					<p class="lead mb-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-						possimus ab labore provident mollitia. Id assumenda voluptate earum corporis facere quibusdam
-						quisquam iste ipsa cumque unde nisi, totam quas ipsam.</p>
+	<header class="container-fluid">
+		<div class="row submitbusinessheroimg heroimg">
+			<div class="col-md-12">
+				<div class="row no-gutters bg-color-name-title">
+					<div class="col heading">
+						<h1 class="hero-title">Submit A Business</h1>
+						<h3 class="hero-subtitle">Register you business today and share updates with the community</h3>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+	<!-- /.header -->
 
 	<!-- Page Content -->
 	<!--BLURB - Shop local Support Galway-->
@@ -90,39 +83,22 @@
 		<form onsubmit="return sendMail(this);">
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label class="text-dark" for="fullname">Full name</label
-                    ><input type="text" name="name" class="form-control py-4" id="fullname" placeholder="Full name" required /></div>
+					<label class="text-dark" for="fullname">Full name</label><input type="text" name="name" class="form-control py-4" id="fullname" placeholder="Full name" required /></div>
 					<div class="form-group col-md-6">
 						<label class="text-dark" for="emailaddress">Email</label>
-                        <input type="text" name="emailaddress" class="form-control py-4" id="emailaddress" placeholder="Email - name@example.com" required /></div>
+						<input type="text" name="emailaddress" class="form-control py-4" id="emailaddress" placeholder="Email - name@example.com" required /></div>
 					</div>
-				<!--	<select class="custom-select">
-  <option selected>Open this select menu</option>
-  <option value="1">Health & Fitness</option>
-  <option value="2">Events</option>
-  <option value="3">Hair & Beauty</option>
-  <option value="4">Home & Garden</option>
-  <option value="5">Events</option>
-  <option value="6">Shopping</option>
-  <option value="7">Charity & Volunteering</option>
-  <option value="8">Services</option>
-</select>-->
-
 					<div class="form-group">
 						<label class="text-dark" for="businesssubmissionsummary">Business Overview</label>
-                        <textarea rows="5" name="businesssubmissionsummary" class="form-control py-3" id="businesssubmissionsummary" placeholder="Please share with us an overview of your businiess and how best to support you" required></textarea>
-                    </div>
-
+						<textarea rows="5" name="businesssubmissionsummary" class="form-control py-3" id="businesssubmissionsummary" placeholder="Please share with us an overview of your businiess and how best to support you" required></textarea>
+					</div>
 					<div class="text-center">
 						<button class="btn btn-primary btn-marketing mt-4" type="submit">Submit Request</button></div>
 		</form>
 	</div>
-	
-
 
 	<!-- Newsletter Section -->
-
-	<section class="bg-yellow pt-5 pb-10 pb-5">
+	<!--<section class="bg-yellow pt-5 pb-10 pb-5">
 		<div class="container">
 			<div class="newslettercard mt-n15 mb-10 z-1">
 				<div class="card-body p-5">
@@ -133,38 +109,45 @@
 								added to our application!</p>
 						</div>
 						<div class="col-lg-6">
-							<div class="input-group mb-2">
-								<input class="form-control form-control-solid" type="text" placeholder="youremail@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
-								<div class="input-group-append">
-									<button class="btn btn-primary" id="button-addon2" type="button">Sign up</button>
+							<form onsubmit="return sendMail(this);">
+								<div class="input-group mb-2">
+									<input class="form-control form-control-solid" type="text" name="emailaddress2" id="emailaddress2" placeholder="Email - name@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+									<div class="input-group-append">
+										<button class="btn btn-primary" id="button-addon2" type="submit">Sign up</button>
+									</div>
 								</div>
-							</div>
-							<div class="small text-gray-500">You can unsubscribe at any time.</div>
+								<div class="small text-gray-500">
+									<p>You can unsubscribe at any time.</p>
+								</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
-	</section>
+		</div>
+	</section>-->
 
-
-
-	</div>
-	<!-- /.container -->
+	<!-- /.End Newsletter Section -->
 
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
 		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+			<p class="m-0 text-center text-white">&copy; We Support Local 2020</p>
 		</div>
-		<!-- /.container -->
-	</footer>
-<!-- emailJS-->
-<script src="assets/js/submitBusiness.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</footer>
+	<!-- /.Footer -->
+
+	<!-- SCRIPTS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- emailJS-->
+	<script src="assets/js/submitBusiness.js"></script>
+	<!--<script src="assets/js/newsletterSignUp.js"></script>--- Noticed last min conflict on emailJS templates-->
+
+	<!-- Bootstrap core JavaScript -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
