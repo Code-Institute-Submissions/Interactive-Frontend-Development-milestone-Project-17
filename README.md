@@ -284,13 +284,14 @@ git clone https://github.com/USERNAME/REPOSITORY
 
 #### Images
 - The We Support Local logo was created using [Canva](https://www.canva.com/).
-- All imagery for the site was sourced from Canva](https://www.canva.com/).
+- All imagery for the site was sourced from [Canva](https://www.canva.com/).
 
 
 ### Code
-- Code for the photo grid was taken from this [W3Schools](https://www.w3schools.com/howto/howto_css_flip_card.asp) post.
-- Box shadow codes were generated at [CSS matic | box-shadow](https://cssmatic.com/box-shadow).
-- Code for google maps work 
+- Code for the photo grid was taken from this [W3Schools](https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp) post.
+- Google maps impmelentation was supported but the [Goole Maps Places API Documentation](https://developers.google.com/places/web-service/overview)
+- Code for the radio buttons input for the goodle maps type was from [StactOverflow](https://stackoverflow.com/questions/41970336/update-marker-and-place-types-using-radio-button-google-place);
+- Elements and layout for the site was taken from [Bootstrap](https://startbootstrap.com/snippets/)
 
 ### Acknowledgements
 
