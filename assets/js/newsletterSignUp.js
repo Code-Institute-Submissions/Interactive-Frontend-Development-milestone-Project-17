@@ -1,8 +1,6 @@
-//console.log("Hello!");
-
 function sendMail(contactForm) {
-    emailjs.send("gmail","business_submission", {
-        "from_email": contactForm.emailaddress.value,
+    emailjs.send("gmail","template_K2BdWOP8", {
+        "from_email": contactForm.emailaddress2.value,
     })
     .then(
         function(response) {

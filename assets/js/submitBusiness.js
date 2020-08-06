@@ -1,5 +1,3 @@
-//console.log("Hello!");
-
 function sendMail(contactForm) {
     emailjs.send("gmail","business_submission", {
         "from_name": contactForm.fullname.value,
@@ -14,5 +12,5 @@ function sendMail(contactForm) {
             console.log("FAILED", error);
         }
     );
-    return false;  // To block from loading a new page
+    return false;  
 }
