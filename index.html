@@ -8,22 +8,21 @@
 	<!--access exrtenal links - bootstrap cdn - https://www.bootstrapcdn.com/-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		type="text/css" />
-	<!--access exrtenal links - fontAwesome cdn - https://www.bootstrapcdn.com/-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		type="text/css" />
 	<!--CdN to access hover CSS-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
 		type="text/css" />
 	<!-- project CSS style sheet-->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
 	<!-- project JS file -->
 	<link rel="stylesheet" href="assets/js/javascript.js" type="text/javascript" />
-
-
-
-
-
+    <!--EmailJS CODE-->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_QPHGtQWAOIFwpJX3LeemE");
+        })();
+    </script>
+    <!--end EmailJS code-->
 	<title>We Support Local</title>
 </head>
 
@@ -31,11 +30,9 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-grey fixed">
 		<div class="container">
-
 			<a class="navbar-brand logo" href="index.html">
 				<img src="assets/images/WSLlogocircle.png" class="logo" alt="">
 	        </a>
-
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
@@ -77,7 +74,7 @@
 		<p>Check out what’s available in a city near you</p>
 	</div>
 
-	<!-- City Grid - https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp -->
+	<!-- City Grid - ref:https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp -->
 	<section class="container-fluid categoryContainer">
 		<div class="gridrow">
 			<div class="col-lg-4 gridcolumn">
@@ -99,7 +96,6 @@
 	</section>
 
 	<!-- CTA section -->
-
 	<div class="align-items-center ctaContainer">
 		<div class="row ">
 			<div class="col">
@@ -111,7 +107,6 @@
 	<!-- /.CTA-->
 
 	<!-- Newsletter Section -->
-
 	<section class="bg-yellow pt-5 pb-10 pb-5">
 		<div class="container">
 			<div class="newslettercard mt-n15 mb-10 z-1">
@@ -123,33 +118,38 @@
 								added to our application!</p>
 						</div>
 						<div class="col-lg-6">
+                        <form onsubmit="return sendMail(this);">
 							<div class="input-group mb-2">
-								<input class="form-control form-control-solid" type="text" placeholder="youremail@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
-								<div class="input-group-append">
-									<button class="btn btn-primary" id="button-addon2" type="button">Sign up</button>
+						<input class="form-control form-control-solid" type="text" name="emailaddress2" id="emailaddress2" placeholder="Email - name@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+                                <div class="input-group-append">
+									<button class="btn btn-primary" id="button-addon2" type="submit">Sign up</button>
 								</div>
 							</div>
-							<div class="small text-gray-500">You can unsubscribe at any time.</div>
+                            <div class="small text-gray-500"><p>You can unsubscribe at any time.</p></div>
+                            </div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
 	</section>
 
-	<!-- /.container -->
+	<!-- /.End Newsletter Section -->
 
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
 		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; We Support Local 2020</p>
+			<p class="m-0 text-center text-white">&copy; We Support Local 2020</p>
 		</div>
-		<!-- /.container -->
+		
 	</footer>
-	<script src="assets/js/script.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- /.Footer -->
 
+    <!-- SCRIPTS-->
+    <!-- emailJS-->
+    <script src="assets/js/newsletterSignUp.js"></script>
+	<script src="assets/js/script.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
