@@ -12,18 +12,18 @@ var placesList = document.getElementById("placesList");
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: center,
-        zoom: 16
+        zoom: 15
     });
 
-    callService(map, 'cafe'); //if I set it to type info window doesn't show - DO I set a default for each catagory to avoid this? 
-    infowindow = new google.maps.InfoWindow();
-   
-    
+var type = $(".defaultInput").val();
+    callService(map,type); 
+    infowindow = new google.maps.InfoWindow();   
 }
 
 
 function callback(results, status) {
     placesList.innerHTML = "";
+    clearMarker();
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
@@ -44,24 +44,24 @@ function createMarker(place) {
         icon: image,
         title: place.name,
         position: place.geometry.location,
-        url: place.url
     });
+    
+
+
     markers.push(marker);
     marker.addListener("click", () => {
-        infowindow.setContent("<div><strong>" + place.name + "</strong><br>" + "Rating: " + place.rating + "<br>" + place.url + "</div>");
+        infowindow.setContent("<div><strong>" + place.name + "</strong><br>" + "Rating: " + place.rating + "</div>");
         infowindow.open(map, marker, this);
-        /*map.setZoom(18);
-        map.setCenter(marker.getPosition());*/
+       map.setZoom(17);
+        map.setCenter(marker.getPosition());
     });
 
-       /*map.addListener("center_changed", () => {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
+    map.addListener("center_changed", () => {
+    // 3 seconds after the center of the map has changed, pan back to the marker.
     window.setTimeout(() => {
       map.panTo(marker.center());
     }, 3000);
-  });*/
-  
+  });
 
 
     // Create card element
@@ -77,17 +77,17 @@ function createMarker(place) {
         </div>
         <div class="card-block px-2">
             <h4 class="card-title">${place.name}</h4>
-            <p class="card-text">Description</p>
-             <p> Rating: ${place.rating}</p>
-            <p> Area: ${place.vicinity}</p>
-            <a href="${place.url}" class="btn btn-primary align-bottom">${place.url}</a>
+             <p> <strong>Rating:</strong> ${place.rating}</p>
+            <p> <strong> Area:</strong> ${place.vicinity}</p>
+            <a href="https://www.google.com/maps/search/${place.name}" target="_blank">
+            <button class="btn btn-primary align-bottom"> View on Google Maps</button>
+            </a>
+            
         </div>
     </div>
     </div>`;
 
-
     placesList.innerHTML += content;
-
 
 }
 
@@ -95,7 +95,7 @@ function callService(map, place) {
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: center,
-        radius: 1000,
+        radius: 3000,
         type: [place]
     }, callback);
 }
@@ -106,11 +106,13 @@ function clearMarker() {
     }
 }
 
-$(function () {
-    $('.place-types :radio').click(function () {
-        var plc = $(this).val();
-        clearMarker();
-        callService(map, plc);
-    });
 
+$( function () {
+
+	$('.place-types :radio').click( function () {    	
+        var plc = $( this ).val();
+        clearMarker();
+        callService( map, plc);
+    });
+    
 });
