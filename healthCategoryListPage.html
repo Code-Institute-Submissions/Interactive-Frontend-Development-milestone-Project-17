@@ -8,16 +8,20 @@
 	<!--access exrtenal links - bootstrap cdn - https://www.bootstrapcdn.com/-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		type="text/css" />
-	<!--access exrtenal links - fontAwesome cdn - https://www.bootstrapcdn.com/-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-		type="text/css" />
 	<!--CdN to access hover CSS-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
 		type="text/css" />
-
 	<!-- project CSS style sheet-->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<title>We Support Local - Health & Fitness </title>
+    <!--EmailJS CODE-->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_QPHGtQWAOIFwpJX3LeemE");
+        })();
+    </script>
+    <!--end EmailJS code-->
+	<title>WSL - Galway - Health & Fitness </title>
 </head>
 
 <body>
@@ -50,13 +54,13 @@
 		</div>
 	</nav>
 	<!-- Header -->
-	<header class="container-fluid pb-5 mb-5">
-		<div class="row foodheroimg heroimg">
+	<header class="container-fluid">
+		<div class="row healthheroimg heroimg">
 			<div class="col-md-12">
 				<div class="row no-gutters bg-color-name-title">
 					<div class="col heading">
 						<h1 class="hero-title">Health & Fitness</h1>
-						<h2 class="hero-subtitle">Explore the local tastes and flavours of Galway</h2>
+						<h2 class="hero-subtitle">Find a gym or sports centre near you</h2>
 					</div>
 				</div>
 			</div>
@@ -64,29 +68,37 @@
 	</header>
 	<!-- /.header -->
 
-	<!-- Page Content -->
+    <!--User Option to return to top of page - map-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+
+<!-- Page Content -->
 	<!--BLURB - Shop local Support Galway-->
 	<div class="header text-align-center">
 		<h1>Support a Local Business in Galway Today</h1>
 		<p>The businesses of Galway need the support of our community.</p>
 	</div>
-
 	<!--Google Map Overview of the different Food & Drink places -->
-	<div class="card card-body bg-light align-content-center">
-		<div class="row">.                                                                                             
+	<div class="card card-body bg-light text-center">
+		<div class="row">
 			<div class="col businessButtons ">
-				<div class="place-types radio-inline" id="places">
-					<input class="with-gap" name="type" type="radio" id="gym" value="gym" checked />
-					<label class="radio-inline" for="cafe">Gym</label>
-					<input class="with-gap" name="type" type="radio" id="restaurant" value="restaurant" />
-					<label class="radio-inline" for="restaurant">Restaurant</label>
-					<input class="with-gap" name="type" type="radio" id="bar" value="bar" />
-					<label class="radio-inline" for="apotik">Bar</label>
+				<div class="place-types radio-inline " id="places">
+                
+                <strong>Select an event venue: </strong>
+                    <input class="defaultInput with-gap" name="type" type="radio" id="gym" value="gym" checked/>
+					<label class="radio-inline" for="gym">Gym</label>
+                    <input class=" with-gap" name="type" type="radio" id="doctor" value="doctor"/>
+					<label class="radio-inline" for="doctor">Doctor</label>
+                    <input class=" with-gap" name="type" type="radio" id="dentist" value="dentist"/>
+					<label class="radio-inline" for="dentist">Dentist</label>
+                    <input class=" with-gap" name="type" type="radio" id="physiotherapist" value="physiotherapist"/>
+					<label class="radio-inline" for="physiotherapist">Physiotherapist</label>
+					
+                    
+					
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<div class="card card-body bg-light align-content-center">
 		<div class="row">
 			<div class="col businessButtons ">
@@ -94,78 +106,48 @@
 			</div>
 		</div>
 	</div>
-
-
- <div  id="placesList"> </div>
-
-
-      
-
 	</br>
 	<div class="ccard card-body bg-light align-content-center">
-		<p class="text-center">Catagory buttons to update the section below</p>
-		<div class="container text-center">
-			<div class="row businessButtons">
-				<!--<div class="col-md-1 businessButtons">
-			<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="foodCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/88979455-a5c2a100-d2b9-11ea-9bae-6767348cf3ad.png"> </a>
-  </button>
-				
-                </div>-->
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="eventsCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083142-f3a5da80-d387-11ea-9427-b571abca6c5d.png"> </a>
-  </button>
-					<!--<div class="collapse" id="collapseExample1">
-					werwerwerwerwerwre
-				</div>-->
+		<h4 class="text-center">Not what you're looking for? Check another catagory</h4>
+		<!--Grid content -->
+		<section class="categorypageContainer">
+			<div class="catagorygridrow categorypageContainer">
+				<div class="catagorygridcolumn">
+					<a href="foodCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077065-50e65f80-d379-11ea-9e68-a9930fcb3e2d.png"></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-    <a href="servicesCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89083135-f1dc1700-d387-11ea-872d-a74fa2241283.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="eventsCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077060-4fb53280-d379-11ea-8532-7bb8474bd040.png"></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="homeCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083140-f30d4400-d387-11ea-94a7-46579538a5d2.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="servicesCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077054-4deb6f00-d379-11ea-954a-1a6485f067f8.png"></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-  <a href="charityCategoryListPage.html">  <img src="https://user-images.githubusercontent.com/17083566/89083139-f30d4400-d387-11ea-96f7-028e2b9fac46.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="homeCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077059-4f1c9c00-d379-11ea-9dcb-2510032c99ec.png" ></a>
 				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-  <a href="hairCategoryListPage.html">  <img src="https://user-images.githubusercontent.com/17083566/89083145-f3a5da80-d387-11ea-9bf2-902a5ffbce76.png"> </a>
-  </button>
-
-				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="shoppingCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083146-f3a5da80-d387-11ea-882a-5c0f578060d3.png"> </a>
-  </button>
-
-				</div>
-				<div class="col-md-1 businessButtons">
-					<button class="btn btn-info mb-4" type="button" id="addGoayaMarkerBtnId" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-   <a href="healthCategoryListPage.html"> <img src="https://user-images.githubusercontent.com/17083566/89083137-f274ad80-d387-11ea-8073-0f93b5664710.png"> </a>
-  </button>
-
+				<div class="catagorygridcolumn">
+					<a href="travelCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89474400-62ff3e00-d77d-11ea-8358-997fac8f7ef7.png" ></a>
 				</div>
 
-
-
+				<div class="catagorygridcolumn">
+					<a href="hairCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077062-504dc900-d379-11ea-9565-cb53c5174367.png" ></a>
+				</div>
+				<div class="catagorygridcolumn">
+					<a href="shoppingCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077057-4e840580-d379-11ea-8402-89c840871ee4.png" ></a>
+				</div>
+				<div class="catagorygridcolumn">
+					<a href="healthCategoryListPage.html"><img src="https://user-images.githubusercontent.com/17083566/89077058-4f1c9c00-d379-11ea-8634-4f5ecf49ee66.png"></a>
+				</div>
 			</div>
-		</div>
 	</div>
+
+	</section>
+	</div>
+
+	<!--List of places -->
+	<div id="placesList"> </div>
 
 
 	<!-- CTA section -->
-
 	<div class="align-items-center ctaContainer">
 		<div class="row ">
 			<div class="col">
@@ -188,28 +170,40 @@
 								added to our application!</p>
 						</div>
 						<div class="col-lg-6">
+                        <form onsubmit="return sendMail(this);">
 							<div class="input-group mb-2">
-								<input class="form-control form-control-solid" type="text" placeholder="youremail@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
-								<div class="input-group-append">
-									<button class="btn btn-primary" id="button-addon2" type="button">Sign up</button>
+						<input class="form-control form-control-solid" type="text" name="emailaddress2" id="emailaddress2" placeholder="Email - name@example.com" aria-label="Recipient's username" aria-describedby="button-addon2" />
+
+                                <div class="input-group-append">
+									<button class="btn btn-primary" id="button-addon2" type="submit">Sign up</button>
 								</div>
 							</div>
-							<div class="small text-gray-500">You can unsubscribe at any time.</div>
+                            <div class="small text-gray-500"><p>You can unsubscribe at any time.</p></div>
+                            </div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
 	</section>
+
+	<!-- /.End Newsletter Section -->
+
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
 		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+			<p class="m-0 text-center text-white">&copy; We Support Local 2020</p>
 		</div>
+		
 	</footer>
+    <!-- /.Footer -->
 
-	<!--SCRIPTS-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="assets/js/maps.js"></script>
+    <!-- SCRIPTS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/maps.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/newsletterSignUp.js"></script>
+	
 	<!--Google maps api-->
 	<script
 		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
@@ -221,11 +215,8 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXVI8fNS34Bmsh24PZHD16mlPtimQKqQE&callback=initMap&libraries=places">
 	</script>
 	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
-
 </html>
